@@ -1,7 +1,3 @@
 resources:
 - deployment.yaml
 - service.yaml
-
-# configMapGenerator:
-# - name: example-app-config
-#   env: application.properties

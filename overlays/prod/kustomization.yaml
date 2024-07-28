@@ -8,4 +8,5 @@ patches:
 
 configMapGenerator:
 - name: example-app-config
-  env: ./application.properties
+  envs:
+  - application.properties
