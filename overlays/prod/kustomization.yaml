@@ -5,3 +5,7 @@ namePrefix: prod-
 
 patches:
 - path: replicas.yaml
+
+configMapGenerator:
+- name: example-app-config
+  env: ./application.properties
