@@ -1,5 +1,7 @@
 resources:
 - ../../base
+# By importing a file here, a specific resource can be created only in this customization
+- ./clusterip.yaml
 
 namePrefix: prod-
 
