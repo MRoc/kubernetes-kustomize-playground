@@ -10,3 +10,12 @@ configMapGenerator:
 - name: example-app-config
   envs:
   - application.properties
+
+patches:
+  - target:
+      kind: Ingress
+      name: example-app-ingress
+    patch: |-
+      - op: replace
+        path: /spec/rules/0/host
+        value: local.example.com

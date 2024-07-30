@@ -1,3 +1,5 @@
 resources:
-- deployment.yaml
-- service.yaml
+- example-app-clusterip.yaml
+- example-app-deployment.yaml
+- example-app-ingress-ingress.yaml
+- example-app-node-port.yaml

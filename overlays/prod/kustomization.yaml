@@ -1,7 +1,5 @@
 resources:
 - ../../base
-# By importing a file here, a specific resource can be created only in this customization
-- ./clusterip.yaml
 
 namePrefix: prod-
 
@@ -12,3 +10,12 @@ configMapGenerator:
 - name: example-app-config
   envs:
   - application.properties
+
+patches:
+  - target:
+      kind: Ingress
+      name: example-app-ingress
+    patch: |-
+      - op: replace
+        path: /spec/rules/0/host
+        value: production.example.com

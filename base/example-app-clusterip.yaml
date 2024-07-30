@@ -5,6 +5,7 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-  - port: 3000
+  - targetPort: 80
+    port: 80
   selector:
     tier: frontend
